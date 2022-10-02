@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Publicaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Deporte</th>
+      <th>Precio</th>
+      <th>Descripción</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= post.sport %></td>
+        <td><%= post.fee %></td>
+        <td><%= post.description %></td>
+        <td><%= link_to 'Ver Publicación', post %></td>
+        <td><%= link_to 'Editar Publicación', edit_post_path(post) %></td>
+        <td><%= button_to 'Eliminar Publicación', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Publicación', new_post_path %>

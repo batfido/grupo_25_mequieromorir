@@ -1,0 +1,12 @@
+<% if current_user %>
+    <div class = "title">
+        <h1 class= "title is-2 center">Inicio</h1>
+    </div>
+<% else %>
+    <div class = "title">
+        <h1 class= "title is-2 center">Bienvenidos</h1>
+    </div>
+    <%= link_to "Iniciar sesión", new_user_session_path %>
+    <%= link_to "Registrarse", new_user_registration_path %>
+<% end %>
+

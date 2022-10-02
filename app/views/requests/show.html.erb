@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @request.customer %>
+</p>
+
+<p>
+  <strong>Offerer:</strong>
+  <%= @request.offerer %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @request.item %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @request.quantity %>
+</p>
+
+<p>
+  <strong>due_date:</strong>
+  <%= @request.due_date %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
